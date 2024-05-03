@@ -12,7 +12,7 @@ public class D7 {
 
             do {
                 try {
-                    System.out.println("Insira um numero interio positivo maior do que 1 para que nosso sistema verifique se o mesmo é ou nao um número primo");
+                    System.out.println("Insira um numero inteiro positivo maior do que 1 para que nosso sistema verifique se o mesmo é ou nao um número primo");
                     num = scanner.nextInt();
 
                     if (num <= 1) {
