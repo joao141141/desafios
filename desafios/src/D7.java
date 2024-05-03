@@ -6,9 +6,24 @@ public class D7 {
 
     public static void main(String[] args) {
         try (Scanner scanner = new Scanner(System.in).useLocale(Locale.US)) {
+
             System.out.println("Bem vindo ao nosso verificador de numeros primos.");
-            System.out.println("Insira aqui o numero que tu deseja verificar");
-            int num = scanner.nextInt();
+            int num;
+
+            do {
+                try {
+                    System.out.println("Insira um numero interio positivo maior do que 1 para que nosso sistema verifique se o mesmo é ou nao um número primo");
+                    num = scanner.nextInt();
+
+                    if (num <= 1) {
+                        throw new IllegalArgumentException("Número invalido. Insira um número inteiro positivo maior do que 1.");
+                    }
+                } catch (Exception e) {
+                    scanner.nextLine();
+                    System.out.println("Erro: " + e.getMessage());
+                    num = 0;
+                }
+            } while (num <= 1);
 
             boolean primo = verificarPrimo(num);
 

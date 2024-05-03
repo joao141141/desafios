@@ -1,9 +1,11 @@
+
 import java.util.Locale;
 import java.util.Scanner;
 
 public class D6 {
+
     public static void main(String[] args) {
-        try(Scanner scanner = new Scanner(System.in).useLocale(Locale.US)){
+        try (Scanner scanner = new Scanner(System.in).useLocale(Locale.US)) {
 
             System.out.println("");
             System.out.println("Bem vindo ao nosso verificador de Triangulos!!!");
@@ -13,7 +15,6 @@ public class D6 {
             double ladoA = scanner.nextDouble();
             scanner.nextLine();
 
-
             System.out.println("Lado B:");
             double ladoB = scanner.nextDouble();
             scanner.nextLine();
@@ -22,10 +23,9 @@ public class D6 {
             double ladoC = scanner.nextDouble();
             scanner.nextLine();
 
-            if((ladoA + ladoB) > ladoC && (ladoA + ladoC) > ladoB && (ladoB + ladoC) > ladoA){
+            if ((ladoA + ladoB) > ladoC && (ladoA + ladoC) > ladoB && (ladoB + ladoC) > ladoA) {
                 System.out.println("Triângulo válido");
-            }
-            else {
+            } else {
                 System.out.println("Triângulo Inválido");
             }
 
